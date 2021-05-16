@@ -1,0 +1,21 @@
+net = dagnn.DagNN() ;
+net2 = net ;
+convBlock = dagnn.Conv('size', [3 3 256 16], 'hasBias', true) ;
+net.addLayer('conv1', convBlock, {'x1'}, {'x2'}, {'filters', 'biases'}) ;
+reluBlock = dagnn.ReLU() ;
+net.addLayer('relu1', reluBlock, {'x2'}, {'x3'}, {}) ;
+netStruct = net.saveobj() ;
+save('myfile.mat', '-struct', 'netStruct') ;
+clear netStruct ;
+netStruct = load('myfile.mat') ;
+net = dagnn.DagNN.loadobj(netStruct) ;
+clear netStruct ;
+net.initParams() ;
+input = randn(10,15,256,1,'single') ;
+net.eval({'x1', input}) ;
+i = net.getVarIndex('x3') ;
+output = net.vars(i).value ;
+dzdy = randn(size(output), 'single') ; % projection vector
+net.eval({'x1',input},{'x3',dzdy}) ;
+p = net.getParamIndex('filters') ;
+dzdfilters = net.vars(p).der ;

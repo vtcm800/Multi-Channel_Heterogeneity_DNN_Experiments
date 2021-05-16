@@ -1,0 +1,40 @@
+Mac List:
+- 240995b2909c #Honor 8X (used for collecting fingerprint database, not connecting WiFi)
+- 8844771b6789 #Huawei mate 9 (Android 9.0, connecting 5G band)
+- 34d712a2e3dc #Smartisan T2 (connecting 5G band)
+- b8bc1bdbeadd  #Huawei p8 (used for collecting fingerprint database, not connecting WiFi)
+- 708a096219a1 #Huawei mate 9 (Android 9.0, not connecting WiFi)
+- 00cdfe012d4c #iPhone (connecting 2.4G band for G1-G4, 5G band for G5-G7)
+
+Collecting Site:
+#1 central zone of the office
+#  x: 21.5d
+#  y: 17.3d
+
+#2 office area, next to the door
+#  x: 23.5d
+#  y: 14.3d
+
+#3 Tang's office, indoor
+#  x: 30d
+#  y: 17.8d
+
+#4 Wang's office, weak signal
+#  x: 37d
+#  y: 18.8d
+
+#5 meeting room, weak signal iPhone 5G band
+#  x: 34d
+#  y: 7.8d
+
+#6 Office area close to top left corner
+#  x: 18.5d
+#  y: 13.3d
+
+#7 Office area close to bottom left corner
+  x: 16.5d
+  y: 18.3d
+
+The data format of "exception" file instruction:
+The localization error larger than 7m, the record will be written to "exception" files
+Data Format: timestamp, device MAC address, x coordinate, ycoordinate, mean RSSs of every seconds, the RSSs for localization.

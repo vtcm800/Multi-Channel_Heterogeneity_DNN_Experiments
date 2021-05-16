@@ -1,0 +1,14 @@
+Group 1
+Macbook Pro laptop  a483e7e37fc4
+Dell laptop  6036dda1a103
+
+Group 2
+Xiaomi M6-1  4c49e3c1bc3d
+Xiaomi M6-2  4c49e3c7774f
+Sansung S9+ 8c4500b6d814
+iPad Pro  f0d1a92cd8e0
+
+Unused devices
+Huawei mate 30  30a2c26a69ee
+Meizu pro7s  90f05254a8d8
+OPPO Find X  88d50c8c6ca5
